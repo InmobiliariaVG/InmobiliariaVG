@@ -18,13 +18,19 @@
   </header>
 
   <section id="nosotros" class="seccion">
-    <h2>Sobre Nosotros</h2>
+    <h2 class="titulo-animado">Sobre Nosotros</h2>
     <p>Inmobiliaria VG es una empresa joven y dinámica dedicada a ofrecer soluciones modernas de compra, venta y alquiler de propiedades. Nuestro compromiso es brindar un servicio transparente y personalizado para ayudarte a encontrar el hogar ideal.</p>
   </section>
 
   <section id="catalogo" class="seccion">
-    <h2>Propiedad Destacada</h2>
-    <div class="galeria"></div>
+    <h2 class="titulo-animado">Propiedad Destacada</h2>
+    <div class="carousel">
+      <img id="imagen-activa" src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg" alt="Propiedad destacada" />
+      <div class="controles">
+        <button onclick="anterior()">⬅</button>
+        <button onclick="siguiente()">➡</button>
+      </div>
+    </div>
     <div class="detalle">
       <h3>Dúplex de 3 ambientes</h3>
       <p>90m² en dos plantas. Incluye cocina, comedor, sala, 2 dormitorios, 2 baños, fondo con parrilla.</p>
@@ -40,7 +46,7 @@
   </section>
 
   <section id="contacto" class="seccion">
-    <h2>Contacto</h2>
+    <h2 class="titulo-animado">Contacto</h2>
     <p>¡Seguinos o escribinos directamente!</p>
     <ul class="redes">
       <li><a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a></li>
@@ -53,14 +59,17 @@
   </footer>
 
   <script>
-    const imagenes = ["img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_27ba89b5.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_911b2ecc.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_3ff3c41f.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_8e342591.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_48da43ba.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_aa891a3a.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_af0108da.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_eb517797.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_f03a420a.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_40fa8e98.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_810f290c.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_b3ee9737.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_bedf94eb.jpg","img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_e4feba8c.jpg"];
-    const galeria = document.querySelector(".galeria");
-    imagenes.forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "Foto de propiedad";
-      galeria.appendChild(img);
-    });
+    const imagenes = ['img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_27ba89b5.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_911b2ecc.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_3ff3c41f.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_8e342591.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_48da43ba.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_aa891a3a.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_af0108da.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_eb517797.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_f03a420a.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_40fa8e98.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_810f290c.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_b3ee9737.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_bedf94eb.jpg', 'img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_e4feba8c.jpg'];
+    let indice = 0;
+    const imgElemento = document.getElementById('imagen-activa');
+
+    function mostrarImagen(i) {
+      indice = (i + imagenes.length) % imagenes.length;
+      imgElemento.src = imagenes[indice];
+    }
+
+    function siguiente() { mostrarImagen(indice + 1); }
+    function anterior() { mostrarImagen(indice - 1); }
   </script>
 
 </body>
