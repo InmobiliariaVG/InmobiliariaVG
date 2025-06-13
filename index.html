@@ -11,78 +11,65 @@
   <header>
     <h1>Inmobiliaria VG</h1>
     <nav>
-      <a href="#nosotros">Sobre Nosotros</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <section id="nosotros" class="seccion">
-    <h2 class="titulo-animado">Sobre Nosotros</h2>
-    <p>Inmobiliaria VG es una empresa joven y dinámica dedicada a ofrecer soluciones modernas de compra, venta y alquiler de propiedades. Nuestro compromiso es brindar un servicio transparente y personalizado para ayudarte a encontrar el hogar ideal.</p>
-  </section>
-
   <section id="catalogo" class="seccion">
-    <h2 class="titulo-animado">Propiedades Disponibles</h2>
-    <div class="contenedor-propiedades">
-      
-    <div class="tarjeta-propiedad">
-      <div class="slider"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg" alt="Imagen propiedad 1"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_27ba89b5.jpg" alt="Imagen propiedad 1"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.08_911b2ecc.jpg" alt="Imagen propiedad 1"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_3ff3c41f.jpg" alt="Imagen propiedad 1"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.10_8e342591.jpg" alt="Imagen propiedad 1"></div>
-      <div class="detalle">
-        <h3>Dúplex 1</h3>
-        <p>Propiedad cómoda y moderna ideal para vivir en familia.</p>
-        <ul>
-          <li>🛏 2 Dormitorios</li>
-          <li>📏 90m² cubiertos + jardín</li>
-          <li>💲 Venta: USD 160.000</li>
-        </ul>
-        <a class="boton-wsp" target="_blank" href="https://wa.me/XXXXXXXXXXX?text=Hola,%20estoy%20interesado/a%20en%20la%20propiedad%20Dúplex%201%20de%20la%20web%20de%20Inmobiliaria%20VG.">Consultar por WhatsApp</a>
+    <h2 class="titulo-animado">PROPIEDADES DESTACADAS</h2>
+    <div class="grid-propiedades">
+      <div class="tarjeta" onclick="abrirModal()">
+        <div class="imagen" style="background-image: url('../img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg');">
+          <div class="datos-top">
+            <span>90 m²</span>
+            <span>3 Amb.</span>
+          </div>
+        </div>
+        <div class="info">
+          <p>Casa en alquiler zona sur</p>
+          <h3>Dirección falsa 123</h3>
+          <div class="precio">
+            <span>USD 700/mes</span>
+            <span class="codigo">VG123456</span>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div class="tarjeta-propiedad">
-      <div class="slider"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_48da43ba.jpg" alt="Imagen propiedad 2"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_aa891a3a.jpg" alt="Imagen propiedad 2"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_af0108da.jpg" alt="Imagen propiedad 2"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_eb517797.jpg" alt="Imagen propiedad 2"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.11_f03a420a.jpg" alt="Imagen propiedad 2"></div>
-      <div class="detalle">
-        <h3>Dúplex 2</h3>
-        <p>Propiedad cómoda y moderna ideal para vivir en familia.</p>
-        <ul>
-          <li>🛏 2 Dormitorios</li>
-          <li>📏 90m² cubiertos + jardín</li>
-          <li>💲 Venta: USD 160.000</li>
-        </ul>
-        <a class="boton-wsp" target="_blank" href="https://wa.me/XXXXXXXXXXX?text=Hola,%20estoy%20interesado/a%20en%20la%20propiedad%20Dúplex%202%20de%20la%20web%20de%20Inmobiliaria%20VG.">Consultar por WhatsApp</a>
-      </div>
-    </div>
-    
-    <div class="tarjeta-propiedad">
-      <div class="slider"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_40fa8e98.jpg" alt="Imagen propiedad 3"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_810f290c.jpg" alt="Imagen propiedad 3"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_b3ee9737.jpg" alt="Imagen propiedad 3"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_bedf94eb.jpg" alt="Imagen propiedad 3"><img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.12_e4feba8c.jpg" alt="Imagen propiedad 3"></div>
-      <div class="detalle">
-        <h3>Dúplex 3</h3>
-        <p>Propiedad cómoda y moderna ideal para vivir en familia.</p>
-        <ul>
-          <li>🛏 2 Dormitorios</li>
-          <li>📏 90m² cubiertos + jardín</li>
-          <li>💲 Venta: USD 160.000</li>
-        </ul>
-        <a class="boton-wsp" target="_blank" href="https://wa.me/XXXXXXXXXXX?text=Hola,%20estoy%20interesado/a%20en%20la%20propiedad%20Dúplex%203%20de%20la%20web%20de%20Inmobiliaria%20VG.">Consultar por WhatsApp</a>
-      </div>
-    </div>
-    
     </div>
   </section>
 
-  <section id="contacto" class="seccion">
-    <h2 class="titulo-animado">Contacto</h2>
-    <p>¡Seguinos o escribinos directamente!</p>
-    <ul class="redes">
-      <li><a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a></li>
-      <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank">💬 WhatsApp</a></li>
-    </ul>
-  </section>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <div class="modal-galeria">
+        <img src="../img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg" alt="Casa" />
+        <!-- podrías agregar más imágenes como slider aquí -->
+      </div>
+      <div class="modal-detalle">
+        <h2>Dúplex 3 ambientes</h2>
+        <p>Planta baja: cocina-comedor, living, toilette y jardín. Planta alta: 2 dormitorios y baño completo.</p>
+        <ul>
+          <li>Superficie: 90 m²</li>
+          <li>Fondo libre: 6x6</li>
+          <li>Expensas: $190.000</li>
+        </ul>
+        <a href="https://wa.me/XXXXXXXXXXX?text=Hola,%20estoy%20interesado/a%20en%20la%20casa%20publicada%20en%20Inmobiliaria%20VG." target="_blank" class="boton-wsp">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Inmobiliaria VG</p>
   </footer>
 
+  <script>
+    function abrirModal() {{
+      document.getElementById('modal').style.display = 'flex';
+    }}
+    function cerrarModal() {{
+      document.getElementById('modal').style.display = 'none';
+    }}
+  </script>
 </body>
 </html>

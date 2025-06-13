@@ -1,122 +1,143 @@
 
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   background: #f4f4f4;
   color: #333;
 }
-
 header {
   background: #1d3557;
   color: white;
   padding: 1em;
   text-align: center;
 }
-
 nav a {
   color: white;
   margin: 0 1em;
   text-decoration: none;
   font-weight: bold;
 }
-
 .seccion {
   padding: 2em;
   max-width: 1200px;
   margin: auto;
 }
-
 .titulo-animado {
-  font-size: 2em;
   text-align: center;
+  font-size: 1.8em;
+  color: #000;
   margin-bottom: 1em;
-  animation: fadeInUp 1s ease-in-out;
-  color: #1d3557;
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.grid-propiedades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
 }
-
-.contenedor-propiedades {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  justify-items: center;
-}
-
-.tarjeta-propiedad {
+.tarjeta {
+  width: 250px;
   background: white;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.tarjeta:hover {
+  transform: scale(1.03);
+}
+.tarjeta .imagen {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.datos-top {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 3px 6px;
+  font-size: 0.8em;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 360px;
+  gap: 8px;
 }
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  max-width: 100%;
-}
-
-.slider img {
-  flex: 0 0 auto;
-  width: 280px;
-  height: 200px;
-  object-fit: cover;
-  scroll-snap-align: center;
-  border-bottom: 1px solid #ccc;
-}
-
-.detalle {
+.tarjeta .info {
   padding: 1em;
 }
-
-.detalle h3 {
-  margin-top: 0;
+.tarjeta .info h3 {
+  margin: 0.3em 0;
+  font-size: 1.1em;
+}
+.precio {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #d62828;
+}
+.codigo {
+  font-size: 0.9em;
+  color: #888;
 }
 
-.detalle ul {
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal-contenido {
+  background: white;
+  max-width: 700px;
+  width: 90%;
+  padding: 1.5em;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  position: relative;
+}
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.modal-galeria img {
+  max-width: 300px;
+  border-radius: 6px;
+}
+.modal-detalle {
+  flex: 1;
+}
+.modal-detalle h2 {
+  margin-top: 0;
+}
+.modal-detalle ul {
   list-style: none;
   padding: 0;
 }
-
-.detalle ul li {
-  margin: 0.5em 0;
+.modal-detalle ul li {
+  margin-bottom: 0.5em;
 }
-
 .boton-wsp {
   display: inline-block;
   background: #25D366;
   color: white;
-  padding: 0.6em 1em;
-  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 1em;
 }
-
-.redes {
-  list-style: none;
-  padding: 0;
-}
-
-.redes li {
-  margin: 0.5em 0;
-}
-
 footer {
   background: #1d3557;
   color: white;
