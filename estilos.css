@@ -1,57 +1,60 @@
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
   background: #f4f4f4;
   color: #333;
 }
+
 header {
   background: #1d3557;
   color: white;
   padding: 1em;
   text-align: center;
 }
+
 nav a {
   color: white;
   margin: 0 1em;
   text-decoration: none;
   font-weight: bold;
 }
+
 .seccion {
   padding: 2em;
   max-width: 1200px;
   margin: auto;
 }
+
 .titulo-animado {
-  text-align: center;
   font-size: 1.8em;
+  text-align: center;
   color: #000;
   margin-bottom: 1em;
 }
-.grid-propiedades {
+
+.contenedor-propiedades {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
   justify-content: center;
 }
-.tarjeta {
-  width: 250px;
+
+.tarjeta-propiedad {
   background: white;
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 280px;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
-.tarjeta:hover {
-  transform: scale(1.03);
-}
-.tarjeta .imagen {
+
+.tarjeta-propiedad .imagen {
   height: 160px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
+
 .datos-top {
   position: absolute;
   bottom: 5px;
@@ -64,13 +67,16 @@ nav a {
   display: flex;
   gap: 8px;
 }
-.tarjeta .info {
+
+.tarjeta-propiedad .detalle {
   padding: 1em;
 }
-.tarjeta .info h3 {
+
+.tarjeta-propiedad h3 {
   margin: 0.3em 0;
   font-size: 1.1em;
 }
+
 .precio {
   display: flex;
   justify-content: space-between;
@@ -94,6 +100,7 @@ nav a {
   justify-content: center;
   z-index: 999;
 }
+
 .modal-contenido {
   background: white;
   max-width: 700px;
@@ -105,6 +112,7 @@ nav a {
   gap: 1em;
   position: relative;
 }
+
 .cerrar {
   position: absolute;
   top: 10px;
@@ -112,23 +120,25 @@ nav a {
   font-size: 2em;
   cursor: pointer;
 }
+
 .modal-galeria img {
   max-width: 300px;
   border-radius: 6px;
 }
+
 .modal-detalle {
   flex: 1;
 }
-.modal-detalle h2 {
-  margin-top: 0;
-}
+
 .modal-detalle ul {
   list-style: none;
   padding: 0;
 }
+
 .modal-detalle ul li {
   margin-bottom: 0.5em;
 }
+
 .boton-wsp {
   display: inline-block;
   background: #25D366;
@@ -138,6 +148,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
 footer {
   background: #1d3557;
   color: white;

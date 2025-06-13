@@ -11,23 +11,29 @@
   <header>
     <h1>Inmobiliaria VG</h1>
     <nav>
+      <a href="#nosotros">Sobre Nosotros</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
+  <section id="nosotros" class="seccion">
+    <h2 class="titulo-animado">Sobre Nosotros</h2>
+    <p>Inmobiliaria VG es una empresa joven y dinámica dedicada a ofrecer soluciones modernas de compra, venta y alquiler de propiedades. Nuestro compromiso es brindar un servicio transparente y personalizado para ayudarte a encontrar el hogar ideal.</p>
+  </section>
+
   <section id="catalogo" class="seccion">
-    <h2 class="titulo-animado">PROPIEDADES DESTACADAS</h2>
-    <div class="grid-propiedades">
-      <div class="tarjeta" onclick="abrirModal()">
-        <div class="imagen" style="background-image: url('../img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg');">
+    <h2 class="titulo-animado">Propiedades Destacadas</h2>
+    <div class="contenedor-propiedades">
+      <div class="tarjeta-propiedad" onclick="abrirModal()">
+        <div class="imagen" style="background-image: url('img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg');">
           <div class="datos-top">
             <span>90 m²</span>
             <span>3 Amb.</span>
           </div>
         </div>
-        <div class="info">
-          <p>Casa en alquiler zona sur</p>
+        <div class="detalle">
+          <p>Casa moderna zona sur</p>
           <h3>Dirección falsa 123</h3>
           <div class="precio">
             <span>USD 700/mes</span>
@@ -43,8 +49,7 @@
     <div class="modal-contenido">
       <span class="cerrar" onclick="cerrarModal()">&times;</span>
       <div class="modal-galeria">
-        <img src="../img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg" alt="Casa" />
-        <!-- podrías agregar más imágenes como slider aquí -->
+        <img src="img/Imagen de WhatsApp 2025-06-03 a las 19.26.06_ced1eb93.jpg" alt="Casa" />
       </div>
       <div class="modal-detalle">
         <h2>Dúplex 3 ambientes</h2>
@@ -59,6 +64,14 @@
     </div>
   </div>
 
+  <section id="contacto" class="seccion">
+    <h2 class="titulo-animado">Contacto</h2>
+    <ul class="redes">
+      <li><a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a></li>
+      <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank">💬 WhatsApp</a></li>
+    </ul>
+  </section>
+
   <footer>
     <p>&copy; 2025 Inmobiliaria VG</p>
   </footer>
@@ -71,5 +84,6 @@
       document.getElementById('modal').style.display = 'none';
     }}
   </script>
+
 </body>
 </html>
